@@ -66,6 +66,7 @@ Example order body:
 
 ## Notes
 - SQLite database is created locally as `backend/db.sqlite3` after migrations.
-- The frontend uses `VITE_API_BASE_URL`, defaulting to `http://127.0.0.1:8000/api`.
+- The frontend uses `VITE_API_BASE_URL`, defaulting to `/api`; Vite proxies this path to Django during local development.
+- On Vercel, set `DJANGO_ALLOWED_HOSTS` to the deployment hostname(s), comma-separated, in the backend service environment.
 - This is a learning/demo starter. Before production, add authentication, inventory locking, validation hardening, rate limiting, deployment-specific CORS settings, tests, and a production database.
 - Do not commit secrets or your local database. The project includes `.gitignore`.
